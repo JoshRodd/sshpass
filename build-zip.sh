@@ -39,8 +39,8 @@ CUR_VERSION_TAG=-brew
 # Current date of build
 CUR_DATE=2017-03-25
 
-# Current serial number of build; it's a good idea to increment this
-CUR_SNO=4
+# Current serial number of build; it's a good idea to increment this if the zip file is changing
+CUR_SNO=5
 
 # Zip file name
 OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zip"
