@@ -35,7 +35,7 @@ OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zi
 OUTPUT_URL="$CUR_URL/$OUTPUT_FILE"
 
 # Name of the HomeBrew file we will build and adjust the checksum for.
-BREWFILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.rb"
+BREWFILE="archive/$CUR_PKG.rb"
 
 # Find out our current working directory.
 CUR_DIR="$(basename "$(pwd)")"
