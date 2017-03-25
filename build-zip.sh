@@ -34,11 +34,11 @@ CUR_SNO=2
 OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zip"
 OUTPUT_URL="$CUR_URL/$OUTPUT_FILE"
 
+# Name of the HomeBrew file we will build and adjust the checksum for.
+BREWFILE="archive/$CUR_PKG-$CURVERSION$CUR_VERSIN_TAG-$CUR_DATE-$CUR_SNO.rb"
+
 # Find out our current working directory.
 CUR_DIR="$(basename "$(pwd)")"
-
-# Name of the HomeBrew file we will build and adjust the checksum for.
-BREWFILE="$CUR_PKG-$CUR_VERSION.rb"
 
 # Go up a level so the zip file appears properly when unzipped.
 (
