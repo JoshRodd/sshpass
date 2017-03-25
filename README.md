@@ -8,6 +8,8 @@ To install:
 brew install https://raw.githubusercontent.com/JoshRodd/sshpass/master/archive/sshpass.rb
 ```
 
+Before using sshpass, be aware of the security considerations with it.
+
 It has an addition with a HomeBrew .rb file so it can easily be
 installed with HomeBrew, and also has an archive available on public
 GitHib that can be downloaded without needing to navigate through
@@ -21,6 +23,7 @@ location listed below which linked to SourceForge and was based on
 
 Credit to @eugeneoden for originally preparing that.
 
-To build and push to GitHub, use the ```./build-zip.sh``` script.
+To build and push to GitHub, use the ```./build-zip.sh``` script. This is a poor
+man's build/CI and not at all an ideal example of how to do things.
 
 -- @JoshRodd, 25 Mar. 2017
