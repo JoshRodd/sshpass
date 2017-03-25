@@ -11,6 +11,8 @@ if [ "$1" != "" ]; then
 		echo The --use_current_zip option will not regenerate the zip file, which
 		echo is useful if you know nothing has changed in order to avoid touching
 		echo the checksum.
+		echo
+		exit 1
 	fi
 fi
 
