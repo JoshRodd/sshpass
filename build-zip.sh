@@ -56,6 +56,15 @@ zip -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
 -exec printf -- '-i ' ';' -print)
 )
 
+else
+
+	echo Note: using the existing .zip file.
+
+	if [ ! -f "$OUTPUT_FILE" ]; then
+		echo Cannot find an existing .zip file.
+		exit 1k
+	fi
+
 fi
 
 # Build the HomeBrew file.
