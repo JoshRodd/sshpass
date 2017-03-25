@@ -4,8 +4,17 @@
 # installing with HomeBrew. The .zip file will have identical contents
 # to the version of sshpass from the upstream at SourceForge.
 
-# Make a build and an archive directory
-mkdir -p build/
+if [ "$1" != "" ]; then
+	if [ "$1" != "--use_current_zip" ]; then
+		echo Usage: "$0 --use_current_zip"
+		echo
+		echo The --use_current_zip option will not regenerate the zip file, which
+		echo is useful if you know nothing has changed in order to avoid touching
+		echo the checksum.
+	fi
+fi
+
+# Make an archive directory
 mkdir -p archive/
 
 # The name of this script.
@@ -48,7 +57,7 @@ if [ "$1" != "--use_current_zip" ]; then
 cd ..
 OUTPUT_FILE="$CUR_DIR/$OUTPUT_FILE"
 rm -f "$OUTPUT_FILE"
-zip -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
+zip -9 -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
 \! -name .gitignore \
 \! -name "$CUR_PKG-*.rb" \
 \! -name "$CUR_SCRIPT" \
