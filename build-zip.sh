@@ -16,7 +16,8 @@ CUR_PKG=sshpass
 
 # The URL base on GitHub for the output files.
 CUR_GIT_USER=JoshRodd
-CUR_URL="https://github.com/$CUR_GIT_USER/$CUR_PKG"
+CUR_GITHUB_URL="https://github.com/$CUR_GIT_USER/$CUR_PKG"
+CUR_URL="https://raw.githubusercontent.com/$CUR_GIT_USER/$CUT_PKG"
 
 # Current version
 CUR_VERSION=1.06
@@ -32,13 +33,15 @@ CUR_SNO=3
 
 # Zip file name
 OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zip"
-OUTPUT_URL="$CUR_URL/blob/master/$OUTPUT_FILE"
+OUTPUT_URL="$CUR_URL/master/archive/$OUTPUT_FILE"
 
 # Name of the HomeBrew file we will build and adjust the checksum for.
 BREWFILE="archive/$CUR_PKG.rb"
 
 # Find out our current working directory.
 CUR_DIR="$(basename "$(pwd)")"
+
+if [ "$1" != "--use_current_zip" ]; then
 
 # Go up a level so the zip file appears properly when unzipped.
 (
@@ -52,6 +55,8 @@ zip -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
 \! -name "README.md" \
 -exec printf -- '-i ' ';' -print)
 )
+
+fi
 
 # Build the HomeBrew file.
 cat >$BREWFILE <<"'''"
