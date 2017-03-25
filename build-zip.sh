@@ -54,7 +54,6 @@ zip -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
 )
 
 # Build the HomeBrew file.
-BREWFILE="$BREWFILE.new"
 cat >$BREWFILE <<"'''"
 require 'formula'
 
