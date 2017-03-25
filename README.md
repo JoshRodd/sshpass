@@ -15,4 +15,6 @@ location listed below which linked to SourceForge and was based on
 
 Credit to @eugeneoden for originally preparing that.
 
+To build and push to GitHub, use the ```./build-zip.sh``` script.
+
 -- @JoshRodd, 25 Mar. 2017
