@@ -17,7 +17,7 @@ CUR_PKG=sshpass
 # The URL base on GitHub for the output files.
 CUR_GIT_USER=JoshRodd
 CUR_GITHUB_URL="https://github.com/$CUR_GIT_USER/$CUR_PKG"
-CUR_URL="https://raw.githubusercontent.com/$CUR_GIT_USER/$CUT_PKG"
+CUR_URL="https://raw.githubusercontent.com/$CUR_GIT_USER/$CUR_PKG"
 
 # Current version
 CUR_VERSION=1.06
