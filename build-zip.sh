@@ -32,7 +32,7 @@ CUR_SNO=2
 
 # Zip file name
 OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zip"
-OUTPUT_URL="$CUR_URL/$OUTPUT_FILE"
+OUTPUT_URL="$CUR_URL/blob/master/$OUTPUT_FILE"
 
 # Name of the HomeBrew file we will build and adjust the checksum for.
 BREWFILE="archive/$CUR_PKG.rb"
