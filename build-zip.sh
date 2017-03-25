@@ -56,6 +56,9 @@ zip -qr "$OUTPUT_FILE" "$CUR_DIR" $(find "$CUR_DIR" -type f -maxdepth 1 \
 -exec printf -- '-i ' ';' -print)
 )
 
+echo "The file \`$OUTPUT_FILE' has been made and is ready to push to git:"
+echo
+
 else
 
 	echo Note: using the existing .zip file.
@@ -91,8 +94,6 @@ end
 '''
 
 # Inform the user the file has been created
-echo "The file \`$OUTPUT_FILE' has been made and is ready to push to git:"
-echo
 if [ "$1" != "--use_current_zip" ]; then
 echo "git add $OUTPUT_FILE $BREWFILE $CUR_SCRIPT"
 git add "$OUTPUT_FILE" "$BREWFILE" "$CUR_SCRIPT"
