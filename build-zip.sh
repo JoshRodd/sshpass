@@ -80,8 +80,8 @@ end
 echo "The file \`$OUTPUT_FILE' has been made and is ready to push to git:"
 echo
 echo "git add $OUTPUT_FILE $BREWFILE $CUR_SCRIPT"
-#git add "$OUTPUT_FILE" "$BREWFILE" "$CUR_SCRIPT"
+git add "$OUTPUT_FILE" "$BREWFILE" "$CUR_SCRIPT"
 echo "git commit $OUTPUT_FILE $BREWFILE $CUR_SCRIPT -m 'Updated archive .zip for $CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO'"
-#git commit "$OUTPUT_FILE" "$BREWFILE" "$CUR_SCRIPT" -m 'Updated archive .zip for $CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO'"
+git commit "$OUTPUT_FILE" "$BREWFILE" "$CUR_SCRIPT" -m 'Updated archive .zip for $CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO'"
 echo
 echo "Run a \`git push' now if you like the above changes."
