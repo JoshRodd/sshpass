@@ -29,11 +29,11 @@ CUR_VERSION_TAG=-brew
 CUR_DATE=2017-03-25
 
 # Current serial number of build; it's a good idea to increment this
-CUR_SNO=3
+CUR_SNO=4
 
 # Zip file name
 OUTPUT_FILE="archive/$CUR_PKG-$CUR_VERSION$CUR_VERSION_TAG-$CUR_DATE-$CUR_SNO.zip"
-OUTPUT_URL="$CUR_URL/master/archive/$OUTPUT_FILE"
+OUTPUT_URL="$CUR_URL/master/$OUTPUT_FILE"
 
 # Name of the HomeBrew file we will build and adjust the checksum for.
 BREWFILE="archive/$CUR_PKG.rb"
